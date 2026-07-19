@@ -17,6 +17,7 @@ public class HotelController
     private HotelService hotelService;
 
 
+    @PostMapping
     public ResponseEntity<Hotel> create(@RequestBody Hotel hotel)
     {
         return ResponseEntity.status(HttpStatus.CREATED).body(hotelService.create(hotel));
